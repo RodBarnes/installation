@@ -8,7 +8,7 @@ if [[ "$EUID" = 0 ]]; then
   exit
 fi
 
-# Copy the scripts, make them executable, then move then to /usr/local/bin
+# Copy the tool command scripts, make them executable, then move then to /usr/local/bin
 sudo mkdir /tmp/TOOL_SCRIPTS
 
 pushd "$DIR"
@@ -22,10 +22,14 @@ for file in *.sh; do
 done
 popd
 
+# Copy the tool library scripts
 sudo cp ../tools/lib/* /tmp/TOOL_SCRIPTS
 sudo chown root:root /tmp/TOOL_SCRIPTS/*
 sudo mv /tmp/TOOL_SCRIPTS/* /usr/local/lib
 
 sudo rmdir /tmp/TOOL_SCRIPTS
+
+# Add functions to shell
+cat ./functions.sh >> /home/($USER)bashrc.sh
 
 popd
