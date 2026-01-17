@@ -12,7 +12,7 @@ fi
 sudo mkdir /tmp/TOOL_SCRIPTS
 
 pushd "$DIR"
-sudo cp ../scripts/bin/* /tmp/TOOL_SCRIPTS
+sudo cp ../tools/bin/* /tmp/TOOL_SCRIPTS
 sudo chown root:root /tmp/TOOL_SCRIPTS/*
 sudo chmod +x /tmp/TOOL_SCRIPTS/*
 
@@ -22,7 +22,7 @@ for file in *.sh; do
 done
 popd
 
-sudo cp ../scripts/lib/* /tmp/TOOL_SCRIPTS
+sudo cp ../tools/lib/* /tmp/TOOL_SCRIPTS
 sudo chown root:root /tmp/TOOL_SCRIPTS/*
 sudo mv /tmp/TOOL_SCRIPTS/* /usr/local/lib
 
