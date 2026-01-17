@@ -1,2 +1,2 @@
 # Installation
-Just a collection of `bash` scripts for installing Linux.
+Just a collection of `bash` scripts for configuring Linux.
