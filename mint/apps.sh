@@ -35,6 +35,5 @@ sudo apt -y install brave-browser
 # Additional software
 sudo apt install -y htop procinfo hwinfo lsscsi
 sudo apt install -y gparted
-sudo apt install -y micro
 sudo apt install -y ncdu
 
